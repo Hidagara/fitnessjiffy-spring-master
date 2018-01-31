@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url:  jdbc:mysql://localhost/fitnessjiffy?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC #jdbc:sqlserver://localhost;databaseName=spring #jdbc:mysql://localhost/fitnessjiffy
+    driverClassName: com.mysql.jdbc.Driver #com.microsoft.sqlserver.jdbc.SQLServerDriver #com.mysql.jdbc.Driver
+    username: fitnessjiffy
+    password: fitnessjiffy
+    test-on-borrow: true
+    validation-query: SELECT 1
+
+  jpa:
+    database: sql_server
+    hibernate:
+      ddl-auto: validate
+      show_sql: true
+  thymeleaf:
+    cache: false
+
+reportdata:
+  update-delay-in-millis: 120000
+  reportdata.cleanup-frequency-in-millis: 12000
